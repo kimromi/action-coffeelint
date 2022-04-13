@@ -6,9 +6,10 @@ export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 cd "${GITHUB_WORKSPACE}/${INPUT_WORKDIR}" || exit 1
 
 pwd
-ls -a
-git rev-parse --show-prefix
+ls -la
 git --version
+whoami
+cat /etc/passwd
 
 if [ ! -f "$(npm bin)/coffeelint" ]; then
   npm install

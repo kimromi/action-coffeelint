@@ -1,0 +1,10 @@
+name: coffeelint
+on: [push]
+jobs:
+  coffeelint:
+    name: coffeelint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: coffeelint
+        uses: kimromi/action-coffeelint@master
